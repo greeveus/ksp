@@ -9,6 +9,17 @@ const cartTotal = document.querySelector("#cart-total");
 const clearCartButton = document.querySelector("#clear-cart");
 const payButton = document.querySelector("#pay-button");
 
+const saveCart = () => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+};
+const loadCart = () => {
+    const savedCart = localStorage.getItem("cart");
+
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+};
+
 const calculateTotal = () => {
     let total = 0;
 
@@ -32,6 +43,7 @@ const renderCart = () => {
 
         removeButton.addEventListener("click", () => {
             cart.splice(index, 1);
+            saveCart();
             renderCart();
         });
 
@@ -67,12 +79,14 @@ addToCartButtons.forEach((button) => {
 
         cart.push(productData);
 
+        saveCart();
         renderCart();
     });
 });
 
 clearCartButton.addEventListener("click", () => {
     cart = [];
+    saveCart();
     renderCart();
 });
 
@@ -83,7 +97,11 @@ payButton.addEventListener("click", () => {
         alert("Покупка прошла успешно!");
 
         cart = [];
+        saveCart();
         renderCart();
     }
 });
+
+loadCart();
+renderCart();
 
