@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 25px;
+
+    background-color: rgb(248, 246, 242);
+
+    color: rgb(35, 35, 40);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    font-size: 32px;
+    color: rgb(40, 45, 60);
+}
+
+h2 {
+    color: rgb(40, 45, 60);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgb(210, 210, 215);
+
+    margin: 22px 0;
+}
+
+
+/* Меню */
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+
+    list-style-type: none;
+
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: rgb(70, 90, 125);
+
+    font-size: 18px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    color: rgb(40, 55, 90);
+    text-decoration: underline;
+}
+
+
+/* Заголовки на страницах манги */
+
+.title-heading {
+    color: black;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    background-color: rgb(225, 232, 242);
+
+    padding: 8px 12px;
+    margin-top: 25px;
+
+    border-radius: 5px;
+}
+
+
+/* Краткое описание */
+
+.short-desc {
+    color: rgb(90, 75, 75);
+
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+
+    max-width: 800px;
+}
+
+
+/* Подробное описание */
+
+.detailed-desc {
+    color: rgb(35, 35, 35);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-align: left;
+
+    max-width: 850px;
+}
+
+
+/* Характеристики */
+
+.char-list {
+    color: rgb(60, 70, 90);
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 28px;
+
+    list-style-image: url("../img/marker.png");
+
+    background-color: rgb(255, 255, 255);
+
+    max-width: 650px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+
+    border: 1px solid rgb(220, 220, 225);
+    border-radius: 6px;
+}
+
+
+/* Обложка на странице манги */
+
+body > a > img {
+    border-radius: 6px;
+
+    border: 1px solid rgb(210, 210, 215);
+}
+
+
+/* Фильтр */
+
+.catalog-filter {
+    margin-bottom: 25px;
+
+    padding: 12px 15px;
+
+    background-color: rgb(238, 240, 245);
+
+    border-radius: 6px;
+}
+
+select {
+    margin-left: 8px;
+
+    padding: 7px 10px;
+
+    font-size: 14px;
+
+    border: 1px solid rgb(190, 195, 205);
+    border-radius: 5px;
+
+    background-color: white;
+}
+
+
+/* Каталог */
+
+.catalog-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.product {
+    padding: 18px;
+
+    background-color: rgb(255, 255, 255);
+
+    border: 1px solid rgb(220, 220, 225);
+    border-radius: 8px;
+}
+
+.product img {
+    display: block;
+
+    width: 150px;
+    height: 215px;
+
+    object-fit: cover;
+
+    margin-bottom: 12px;
+
+    border-radius: 5px;
+}
+
+.product p {
+    margin: 8px 0;
+}
+
+.product a {
+    color: rgb(55, 75, 115);
+
+    font-size: 17px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.product a:hover {
+    text-decoration: underline;
+}
+
+
+/* Кнопки */
+
+button {
+    padding: 8px 12px;
+
+    font-size: 14px;
+
+    color: white;
+    background-color: rgb(75, 90, 125);
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(55, 70, 105);
+}
+
+
+/* Корзина */
+
+.cart-box {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background-color: rgb(238, 240, 245);
+
+    border-radius: 8px;
+}
+
+#cart-list {
+    padding-left: 0;
+
+    list-style-type: none;
+}
+
+#cart-list li {
+    margin-bottom: 10px;
+
+    padding: 8px 10px;
+
+    background-color: white;
+
+    border-radius: 5px;
+}
+
+#cart-list button {
+    margin-left: 10px;
+}
+
+#cart-total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 12px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Мир манги</title>
+</head>
+
+<body>
+    <ul class="nav-menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+    </ul>
+
+    <hr>
+
+    <h1>Каталог манги</h1>
+
+    <div class="catalog-filter">
+        <label for="category-filter">Фильтр по жанру:</label>
+
+        <select id="category-filter">
+            <option value="all">Все</option>
+            <option value="fantasy">Фэнтези</option>
+            <option value="sci-fi">Фантастика</option>
+            <option value="dark-fantasy">Тёмное фэнтези</option>
+        </select>
+    </div>
+
+    <div class="catalog-grid">
+        <div class="product" data-name="Созданный в Бездне" data-price="650" data-category="fantasy">
+            <img src="img/made-in-abyss.jpg" alt="Обложка Созданный в Бездне" width="150">
+            <p>
+                <a href="made-in-abyss.html">Созданный в Бездне</a>
+            </p>
+            <p>Цена: 650 ₽</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+
+        <div class="product" data-name="Иллюзия рая" data-price="700" data-category="sci-fi">
+            <img src="img/heavenly-delusion.jpg" alt="Обложка Иллюзия рая" width="150">
+            <p>
+                <a href="heavenly-delusion.html">Иллюзия рая</a>
+            </p>
+            <p>Цена: 700 ₽</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+
+        <div class="product" data-name="Берсерк" data-price="750" data-category="dark-fantasy">
+            <img src="img/berserk.jpg" alt="Обложка Берсерк" width="150">
+            <p>
+                <a href="berserk.html">Берсерк</a>
+            </p>
+            <p>Цена: 750 ₽</p>
+            <button class="add-to-cart">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <div class="cart-box">
+        <h2>Корзина</h2>
+
+        <ul id="cart-list"></ul>
+
+        <p id="cart-total">Итого: 0 ₽</p>
+
+        <div class="cart-actions">
+            <button id="clear-cart">Очистить корзину</button>
+            <button id="pay-button">Оплатить</button>
+        </div>
+    </div>
+
+    <hr>
+    <p>&copy; Все права защищены</p>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
